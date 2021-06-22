@@ -9,6 +9,10 @@ def home (request):
     return render(request, 'index.html', context={'nom_usuario': nombre},
     )
 
+def contacto(request):
+    return render(request, 'contacto.html')
+
 def galeria(request):
 
     return render(request,'galeria.html',)
+

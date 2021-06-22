@@ -1,0 +1,102 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+{% load static %}
+{%block js%}
+<script src="{%static 'core/js/form.js'%}"></script>
+{%endblock%}
+
+<div class="bg-dark text-white  py-5">
+    <div class="container py-5">
+        <h2 class="text-center display-4 mb-5 fw-bold">
+            <span>
+                CONTACTO
+            </span>
+            <i class="bi bi-chat-square-dots-fill text-warning mx-5"></i>
+        </h2>
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 ">
+                <img src="{%static 'core/img/contac.png'%}" alt="">
+            </div>
+            <div class="col-12 col-lg-7">
+                <div>
+                    <p class=" h5 fw-bold ">
+                        Articulamos una importante red de trabajo con personas que desarrollan diversas actividades
+                        turísticas dentro de la región de Tarapacá y principalmente en la provincia del Tamarugal.
+                        El 60% de nuestra organización está compuesta por personas de ascendencia indígena.
+                    </p>
+                    <hr>
+                    <p class="h5 fw-bold ">
+                        Si quieres unirte a la Red, contratar algún servicio o saber más sobre nosotros
+                    </p>
+                    <a class="btn btn-primary btn-lg" href="#form1" role="button">SÍ, ¡QUIERO UNA PROPUESTA!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="bg-dark text-white py-5 " id="form1">
+    <div class="container mt-5">
+        <p>Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+        <form id="formulario" name="datos" method="POST" action="" class="needs-validation" novalidate>
+            <div class="mb-3" id="grupo__email">
+                <label for="email" class="form-label">Tu correo electrónico (requerido)</label>
+                <input name="correo" id="email" type="email" class="form-control"
+                    placeholder="Ingresa aquí tu email" aria-describedby="emailhelp" required>
+                <div class="invalid-feedback"></div>
+
+                <div id="emailhelp" class="form-text">No compartiremos tu mail con nadie.</div>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Tu nombre y apellidos (requerido)</label>
+                <input id="name" name="nombre" type="text" class="form-control" placeholder="Ingresa aquí tu nombre"
+                onchange="CambiarMayusculas()"    
+                required>
+                    
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="prevnumber">+56-9 </span>
+
+                    <input id="telefono" name="nfono" type="tel" class="form-control" aria-describedby="prevnumber"
+                        placeholder="Ingresa aquí tu numero de teléfono" required>
+                    <div class="invalid-feedback">ingrese un numero correcto</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input id="asunto" name="asuntom" type="text" class="form-control"
+                    placeholder="Ingresa aquí tu asunto" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Tu mensaje</label>
+                <textarea class="form-control" name="mensajet" id="mensaje" rows="4" required>
+            </textarea>
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-12 my-4">
+                <div class="form-check">
+                    <input name="check" type="checkbox" class="form-check-input" value="" id="acept" required>
+                    <label for="acept" class="form-check-label">Acepto los Términos y Condiciones</label>
+                </div>
+
+            </div>
+            <p class="my-3 text-center h4 text-success d-none" id="formulario__msj-exito">Formulario enviado con
+                exito</p>
+            <input class="btn  btn-secondary w-100 " type="reset" value="limpiar">
+            <button class="btn  btn-primary w-100 mt-3" type="submit" id="boton">
+                Enviar
+            </button>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
