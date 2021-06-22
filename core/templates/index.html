@@ -1,62 +1,180 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'core/base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
+{% block contenido %}
+{% load static %}
+  <!------------------------------------carousel---------------------------------------->
+  <section class="mt-5 col-12 ">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <!--interno-->
+            <div class="carousel-item active">
+                <img src="{% static 'core/img/slide 1.jpg' %}" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <!--oculto en pantallas pequeñas-->
+                    <h5>OFICINA SALITRERA HUMBERSTONE</h5>
+                    <p>50 km al este de Iquique, Tarapacá, Tamarugal, Pozo Almonte.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/slide 2.png'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Turismo agrícola y aventura Yalane</h5>
+                    <p>Miñi Miñe se ubica en el límite Norte la Comuna de Huara, Provincia del Tamarugal, Región de
+                        Tarapacá.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/slide 3.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>TOUR OASIS DE PICA</h5>
+                    <p>Oasis de Pica y Matilla – Pueblo de La Tirana.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/slide 4.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Museo Corbeta Esmeralda</h5>
+                    <p>El Museo Corbeta Esmeralda es un museo chileno ubicado en la ciudad de Iquique.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<!----------------------------------end carousel-------------------------------------->
+<!--------------------------------------Main------------------------------------------>
+<main class="bg-dark text-white py-5">
     <div class="container">
-        <div class="row">
-            <h1>hola pagina de prueba</h1>
+        <h2 class="text-center display-4 mb-5 fw-bold">
+            <span>
+                DESCUBRE LOS ATRACTIVOS DE NORTE
+            </span>
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+        </h2>
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 ">
+                <h3>Zona norte - Iquique.</h3>
+                <hr>
+                <p class="h5">Iquique es conocida como la “Tierra de campeones” y si visitas el norte chileno, no
+                    puedes dejar de visitar la capital de la Región de Tarapacá. Gracias a los vientos que
+                    predominan en este sector, se puede practicar parapente los 365 días del año y disfrutar las
+                    vistas de Iquique desde las alturas. Si prefieres los deportes náuticos, puedes practicar surf
+                    en la playa Cavancha y si te gusta la aventura en tierra, hacer sandboard en las dunas del cerro
+                    Dragón también se han vuelto uno de los imperdibles si estás en la ciudad.</p>
+                <a href="https://chile.travel/donde-ir/norte-desierto-atacama/iquique"><button
+                        class="btn btn-primary mb-5 mb-lg-0 dis">
+                        <p class="h6 fw-bold ">
+                            Ver más...
+                        </p>
+                    </button></a>
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="hovereffect">
+                    <img src="{% static 'core/img/slide 6.jpg'%}" alt="" class="img-fluid rounded">
+                    <div class="overlay">
+                        <p class="py-5 m-2 ">Playa y desierto son los atractivos turísticos principales que hacen de
+                            Iquique y de la Región de Tarapacá en un destino imperdible para visitar durante tus
+                            vacaciones. </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        {% load static %}
-        <div class="row">
 
-        <img src="{% static 'core/img/paisaje.jpg'%}">
-
-      </div>
-
-        <div class="row">
-        <h2>Bienvenid@ a la página de prueba {{nom_usuario}}</h2>
     </div>
- 
+</main>
+<!------------------------------------end Main---------------------------------------->
+<!---------------------------------Es bonito Soñar------------------------------------>
+<section class="bg-dark text-white py-5">
+    <div class="container  ">
+        <h2 class="text-center display-4 mb-5 fw-bold">
+            <span>
+                Incursio App ya esta disponible.
+            </span>
+            <i class="bi bi-joystick text-danger"></i>
+        </h2>
+        <div class="row align-items-center mx-auto">
+            <div class="col-12 col-lg-4">
+                <div>
+                    <h5 class="text-white">
+                        <span class="badge bg-primary">
+                            nuevo
+                        </span>
+                        Prueba nuestra nueva app de turismo
+                    </h5>
+                    <h2 class="display-5 fw-bold my-5">
+                        Todos los servicios de turismo en un solo lugar<span class="text-primary">.</span>
+                    </h2>
+                    <p class="mb-4">
+                        Dile adios a la guia tradicional y disfruta todos los beneficios de una guia 100% Digital
+                    </p>
+                    <a href="https://play.google.com/store?hl=es&gl=US" class="btn btn-primary">Descargala ya</a>
 
-        <div class="row">
-            <form method="POST" action="#" id="formulario"  >
-                <div class="form-group">
-                    <label for="nombre">nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electronico:</label>
-                    <input type="email" name="email" id="email" class="form-control">
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="content">
+                    <img src="{% static 'core/img/app1.png'%}" class="img-fluid" alt="">
                 </div>
-                <input type="submit" class="btn btn-danger" id="enviar" value="enviar">
-                <input type="reset" class="btn btn-primary" id="limpiar" value="limpiar">
-                <div id="error" class="alert alert-danger" role="alert" ></div>
-            </form>
-
-
+            </div>
         </div>
+    </div>
+</section>
+<!-------------------------------------end Dream-------------------------------------->
+<!---------------------------------api------------------------------------>
+
+    
+
+    <div class="bg-dark text-white">
+
+    <p class="text-center  display-4 mb-5 fw-bold"> Aprovecha los feriados de este año y disfruta de unas pequeñas vacaciones por el norte de Chile </p>
+    <hr>
+    <div id="caja">
+        <h3>Último feriado de la búsqueda es :</h3>
+            <p id="feriado"></p>
+            <br>
         
-
+        
+        <br><br>
+    
+   
+        <button type="button" id="enviar">Cargando datos</button>
     </div>
+    <br><br>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <table class="table text-white "  id="fechas">
+        <thead >
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Irrenunciable</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        </tbody>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+    </table>
+
+</div>
+
+{% endblock %}
