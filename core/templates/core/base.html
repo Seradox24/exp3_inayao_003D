@@ -40,25 +40,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold h5">
                     <li class="nav-item ">
-                        <a href="Index.html" class="nav-link active" aria-current="page"
+                        <a href="{% url 'home'%}" class="nav-link active" aria-current="page"
                             onmouseover="style.color='yellow'" onmouseout="style.color='white'">
                             <p class="text-warning">
                                 Inició
                             </p>
                         </a>
-                    </li>
+                    </li><!--
                     <li class="nav-item">
                         <a href="./pages/quienes somos.html" class="nav-link active" onmouseover="style.color='yellow'"
                             onmouseout="style.color='white'">
                             Quiénes somos
                         </a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
-                        <a href="./pages/galeria.html" class="nav-link active" onmouseover="style.color='yellow'"
+                        <a href="{% url 'galeria'%}" class="nav-link active" onmouseover="style.color='yellow'"
                             onmouseout="style.color='white'">
                             Galería
                         </a>
-                    </li>
+                    </li><!--
                     <li class="nav-item">
                         <a href="./pages/contacto.html" class="nav-link active" onmouseover="style.color='yellow'"
                             onmouseout="style.color='white'">
@@ -70,7 +70,7 @@
                             onmouseout="style.color='white'">
                             Iniciar sesión
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!-- end Menu que se colapsa-->
