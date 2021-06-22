@@ -1,0 +1,30 @@
+:root{
+    --dark: #16191c;
+    --dark: #1e2126;
+    --light: #ffffff;
+}
+
+body{
+    color: var(--light);
+
+}
+
+.bg-dark{ background-color: var(--dark) !important;}
+
+.img-1{
+    background-image: url('../img/Iquiquechile.jpg') ;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2{
+    background-image: url('../img/iquique1.jpg') ;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-3{
+    background-image: url('../img/41.jpeg') ;
+    background-size: cover;
+    background-position: center;
+}
