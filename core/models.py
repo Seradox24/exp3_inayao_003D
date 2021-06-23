@@ -17,3 +17,13 @@ class Vehiculo(models.Model):
 
     def __str__(self):
         return self.patente
+
+class Contacto(models.Model):
+    correo=models.CharField(max_length=50, verbose_name='correo de Contacto')
+    nombre=models.CharField(max_length=75,verbose_name='nombre completo')
+    telefono=models.CharField(max_length=15,verbose_name='numero de contacto')
+    asunto=models.CharField(max_length=50,verbose_name='asunto del mensaje')
+    mensaje=models.TextField(max_length=200,verbose_name='mensaje')
+
+    def __str__(self):
+        return self.correo

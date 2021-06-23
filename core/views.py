@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Contacto
 # Create your views here.
 
 def home (request):
@@ -15,4 +15,11 @@ def contacto(request):
 def galeria(request):
 
     return render(request,'galeria.html',)
+
+def mensajes(request):
+    mensajes=Contacto.objects.all()
+    
+    return render(request,'mensajes.html',context={'datos':mensajes,})
+
+
 

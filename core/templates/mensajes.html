@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+{% load static %}
+
+<div class="bg-dark text-white  py-5">
+    <div class="container py-5">
+        <h2 class="text-center display-4 mb-5 fw-bold">
+            <span>
+                Mensajes
+            </span>
+            <i class="bi bi-chat-square-dots-fill text-warning mx-5"></i>
+        </h2>
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 ">
+                <img src="{%static 'core/img/contac.png'%}" alt="">
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="row text-white">
+                    <h1>
+                        Listado de Contactos
+                    </h1>
+                    <table border='1'>
+                        <tr>
+                            <td>correo</td>
+                            <td>nombre</td>
+                            <td>telefono</td>
+                            <td>asunto</td>
+                            <td>mensajes</td>
+                        </tr>
+                        {%for i in datos%}
+                            <tr>
+                                <td>{{i.correo}}</td>
+                                <td>{{i.nombre}}</td>
+                                <td>{{i.telefono}}</td>
+                                <td>{{i.asunto}}</td>
+                                <td>{{i.mensaje}}</td>
+                            </tr>
+                        {%endfor%}
+
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
